@@ -1,6 +1,16 @@
-<html>
-  <meta http-equiv="refresh" content="0;URL=http://80.78.254.73/" />
-<body>
-  Hello World!
-</body>
+<!DOCTYPE html>
+<html data-destination="http://stackoverflow.com">
+  <head>
+    <noscript><meta id="redirect" http-equiv="refresh" content="0; url=http://stackoverflow.com"></noscript>
+  </head>
+
+  <body>
+    This page has moved. Redirecting...
+    
+  <!-- Redirect in JavaScript with meta refresh fallback above in noscript -->
+  <script>
+  var destination = document.documentElement.getAttribute('data-destination');
+  window.location.href = destination + (window.location.search || '') + (window.location.hash || '');
+  </script>
+  </body>
 </html>
